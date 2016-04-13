@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="demoApp.userInfo.detail.title">UserInfo</span> {{vm.userInfo.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="demoApp.userInfo.name">Name</dt></dt>
+        <dd>
+            <span>{{vm.userInfo.name}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.userInfo.email">Email</dt></dt>
+        <dd>
+            <span>{{vm.userInfo.email}}<span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

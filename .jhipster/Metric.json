@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "goal",
+      "otherEntityName": "goal",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "entry",
+      "otherEntityName": "entry",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "minlength"
+      ],
+      "fieldValidateRulesMinlength": 2
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "amount",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160413134556",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

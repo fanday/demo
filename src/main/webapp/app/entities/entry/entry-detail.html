@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="demoApp.entry.detail.title">Entry</span> {{vm.entry.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="demoApp.entry.date">Date</dt></dt>
+        <dd>
+            <span>{{vm.entry.date | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.entry.exercise">Exercise</dt></dt>
+        <dd>
+            <span>{{vm.entry.exercise}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.entry.meals">Meals</dt></dt>
+        <dd>
+            <span>{{vm.entry.meals}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.entry.alcohol">Alcohol</dt></dt>
+        <dd>
+            <span>{{vm.entry.alcohol}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.entry.notes">Notes</dt></dt>
+        <dd>
+            <span>{{vm.entry.notes}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.entry.goal">goal</span></dt>
+        <dd>
+            <a ui-sref="goal-detail({id:vm.entry.goal.id})">{{vm.entry.goal.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

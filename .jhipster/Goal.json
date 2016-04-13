@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "user",
+      "otherEntityName": "userInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "metric",
+      "otherEntityName": "metric",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "goal"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "minlength"
+      ],
+      "fieldValidateRulesMinlength": 10
+    }
+  ],
+  "changelogDate": "20160413134555",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

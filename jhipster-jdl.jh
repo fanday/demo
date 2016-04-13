@@ -1,0 +1,40 @@
+entity Entry {
+	date LocalDate,
+	exercise Integer,
+    meals Integer,
+    alcohol Integer,
+    notes String
+}
+
+entity UserInfo {
+	name String,
+	email String
+}
+
+entity Goal {
+	name String required,
+	description String required minlength(10)
+}
+
+entity Metric {
+	name String required minlength(2),
+	amount String required
+}
+
+relationship ManyToOne {
+	Goal{user} to UserInfo
+}
+
+relationship ManyToMany{
+	Metric{goal} to Goal{metric}
+}
+
+relationship ManyToOne{
+    Metric{entry} to Entry
+}
+
+relationship ManyToOne{
+	Entry{goal} to Goal
+}
+
+	
