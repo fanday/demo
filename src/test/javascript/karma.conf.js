@@ -1,10 +1,10 @@
 // Karma configuration
 // http://karma-runner.github.io/0.10/config/configuration-file.html
 
-module.exports = function (config) {
+module.exports = function(config) {
     config.set({
         // base path, that will be used to resolve files and exclude
-        basePath: 'src/test/javascript/'.replace(/[^/]+/g,'..'),
+        basePath: 'src/test/javascript/'.replace(/[^/]+/g, '..'),
 
         // testing framework to use (jasmine/mocha/qunit/...)
         frameworks: ['jasmine'],
@@ -54,20 +54,27 @@ module.exports = function (config) {
         preprocessors: {
             './**/*.js': ['coverage']
         },
+        plugins: [
+            'karma-chrome-launcher',
+            'karma-phantomjs-launcher',
+            'karma-jasmine',
+            'karma-junit-reporter'
+        ],
 
-        reporters: ['dots', 'jenkins', 'coverage', 'progress'],
+        reporters: ['dots', 'jenkins', 'coverage', 'progress','junit'],
 
         jenkinsReporter: {
-            
+
             outputFile: 'target/test-results/karma/TESTS-results.xml'
         },
 
         coverageReporter: {
-            
+
             dir: 'target/test-results/coverage',
-            reporters: [
-                {type: 'lcov', subdir: 'report-lcov'}
-            ]
+            reporters: [{
+                type: 'lcov',
+                subdir: 'report-lcov'
+            }]
         },
 
         // web server port
@@ -95,8 +102,8 @@ module.exports = function (config) {
         singleRun: false,
 
         // to avoid DISCONNECTED messages when connecting to slow virtual machines
-        browserDisconnectTimeout : 10000, // default 2000
-        browserDisconnectTolerance : 1, // default 0
-        browserNoActivityTimeout : 4*60*1000 //default 10000
+        browserDisconnectTimeout: 10000, // default 2000
+        browserDisconnectTolerance: 1, // default 0
+        browserNoActivityTimeout: 4 * 60 * 1000 //default 10000
     });
 };
