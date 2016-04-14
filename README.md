@@ -1,5 +1,7 @@
 # demo
 
+[![Build Status](https://travis-ci.org/fanday/demo.svg?branch=master)](https://travis-ci.org/fanday/demo)
+
 This application was generated using JHipster, you can find documentation and help at [https://jhipster.github.io](https://jhipster.github.io).
 
 ## Development
