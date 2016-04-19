@@ -1,0 +1,27 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "province",
+      "otherEntityName": "province",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "cityId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "cityName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160419100224",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

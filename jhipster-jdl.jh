@@ -21,6 +21,20 @@ entity Metric {
 	amount String required
 }
 
+entity Province{
+	provinceId Long,
+    provinceName String
+}
+
+entity City{
+	cityId Long,
+    cityName String
+}
+
+relationship ManyToOne{
+	City{province} to Province
+}
+
 relationship ManyToOne {
 	Goal{user} to UserInfo
 }
@@ -37,4 +51,3 @@ relationship ManyToOne{
 	Entry{goal} to Goal
 }
 
-	

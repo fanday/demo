@@ -11,6 +11,8 @@
                 "userInfo": "UserInfo",
                 "goal": "Goal",
                 "metric": "Metric",
+                "province": "Province",
+                "city": "City",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

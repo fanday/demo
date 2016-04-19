@@ -1,0 +1,19 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "provinceId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "provinceName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160419100223",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}
