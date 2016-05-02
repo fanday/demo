@@ -1,0 +1,44 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "mobilePhoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "captcha",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "captchaStatus",
+      "fieldType": "CaptchaStatus",
+      "fieldValues": "NEW,VERIFY_PASS,VERIFY_FAILED",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "createDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "modifyDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160502022217",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no"
+}

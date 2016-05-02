@@ -20,6 +20,10 @@
             <id>spring-milestones</id>
             <url>http://repo.spring.io/milestone</url>
         </repository>
+        <repository>
+            <id>thirdparty</id>
+            <url>http://192.168.99.100:8081/content/repositories/thirdparty</url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -372,6 +376,12 @@
             <version>${metrics-spark-reporter.version}</version>
         </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
+        <dependency>
+            <groupId>taobao</groupId>
+            <artifactId>sdk</artifactId>
+            <version>20160427</version>
+        </dependency>
+        <!-- taobao sdk -->
     </dependencies>
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>

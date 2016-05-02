@@ -31,6 +31,18 @@ entity City{
     cityName String
 }
 
+enum CaptchaStatus {
+    NEW, VERIFY_PASS, VERIFY_FAILED
+  }
+  
+entity Captcha{
+	mobilePhoneNumber String required,
+    captcha String required,
+    captchaStatus CaptchaStatus required,
+    createDate ZonedDateTime,
+    modifyDate ZonedDateTime
+}
+
 relationship ManyToOne{
 	City{province} to Province
 }

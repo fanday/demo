@@ -1,0 +1,84 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCaptchaLabel" translate="demoApp.captcha.home.createOrEditLabel">Create or edit a Captcha</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.captcha.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="demoApp.captcha.mobilePhoneNumber" for="field_mobilePhoneNumber">MobilePhoneNumber</label>
+            <input type="text" class="form-control" name="mobilePhoneNumber" id="field_mobilePhoneNumber"
+                    ng-model="vm.captcha.mobilePhoneNumber"
+                    required />
+            <div ng-show="editForm.mobilePhoneNumber.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.mobilePhoneNumber.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="demoApp.captcha.captcha" for="field_captcha">Captcha</label>
+            <input type="text" class="form-control" name="captcha" id="field_captcha"
+                    ng-model="vm.captcha.captcha"
+                    required />
+            <div ng-show="editForm.captcha.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.captcha.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="demoApp.captcha.captchaStatus" for="field_captchaStatus">CaptchaStatus</label>
+            <select class="form-control" name="captchaStatus" ng-model="vm.captcha.captchaStatus" id="field_captchaStatus" required>
+                <option value="NEW" translate="demoApp.CaptchaStatus.NEW">NEW</option>
+                <option value="VERIFY_PASS" translate="demoApp.CaptchaStatus.VERIFY_PASS">VERIFY_PASS</option>
+                <option value="VERIFY_FAILED" translate="demoApp.CaptchaStatus.VERIFY_FAILED">VERIFY_FAILED</option>
+            </select>
+            <div ng-show="editForm.captchaStatus.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.captchaStatus.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="demoApp.captcha.createDate" for="field_createDate">CreateDate</label>
+                <div class="input-group">
+                    <input id="field_createDate" type="text" class="form-control" name="createDate" datetime-picker="{{dateformat}}" ng-model="vm.captcha.createDate" is-open="vm.datePickerOpenStatus.createDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="demoApp.captcha.modifyDate" for="field_modifyDate">ModifyDate</label>
+                <div class="input-group">
+                    <input id="field_modifyDate" type="text" class="form-control" name="modifyDate" datetime-picker="{{dateformat}}" ng-model="vm.captcha.modifyDate" is-open="vm.datePickerOpenStatus.modifyDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('modifyDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

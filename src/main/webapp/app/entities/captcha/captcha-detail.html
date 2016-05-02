@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="demoApp.captcha.detail.title">Captcha</span> {{vm.captcha.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="demoApp.captcha.mobilePhoneNumber">MobilePhoneNumber</dt></dt>
+        <dd>
+            <span>{{vm.captcha.mobilePhoneNumber}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.captcha.captcha">Captcha</dt></dt>
+        <dd>
+            <span>{{vm.captcha.captcha}}<span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.captcha.captchaStatus">CaptchaStatus</dt></dt>
+        <dd>
+            <span translate="{{'demoApp.CaptchaStatus.' + vm.captcha.captchaStatus}}">{{vm.captcha.captchaStatus}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.captcha.createDate">CreateDate</dt></dt>
+        <dd>
+            <span>{{vm.captcha.createDate | date:'medium'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="demoApp.captcha.modifyDate">ModifyDate</dt></dt>
+        <dd>
+            <span>{{vm.captcha.modifyDate | date:'medium'}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

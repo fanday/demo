@@ -13,6 +13,7 @@
                 "metric": "Metric",
                 "province": "Province",
                 "city": "City",
+                "captcha": "Captcha",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

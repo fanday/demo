@@ -1,0 +1,10 @@
+{
+    "demoApp": {
+        "CaptchaStatus" : {
+            "null": "",
+            "NEW": "NEW",
+            "VERIFY_PASS": "VERIFY_PASS",
+            "VERIFY_FAILED": "VERIFY_FAILED"
+        }
+    }
+}

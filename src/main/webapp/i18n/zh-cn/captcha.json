@@ -1,0 +1,26 @@
+{
+    "demoApp": {
+        "captcha" : {
+            "home": {
+                "title": "Captchas",
+                "createLabel": "Create a new Captcha",
+                "createOrEditLabel": "Create or edit a Captcha",
+                "search": "Search for Captcha"
+            },
+            "created": "A new Captcha is created with identifier {{ param }}",
+            "updated": "A Captcha is updated with identifier {{ param }}",
+            "deleted": "A Captcha is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Captcha {{ id }}?"
+            },
+            "detail": {
+                "title": "Captcha"
+            },
+            "mobilePhoneNumber": "MobilePhoneNumber",
+            "captcha": "Captcha",
+            "captchaStatus": "CaptchaStatus",
+            "createDate": "CreateDate",
+            "modifyDate": "ModifyDate"
+        }
+    }
+}

@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="demoApp.captcha.home.title">Captchas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="captcha.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="demoApp.captcha.home.createLabel">
+                        Create new Captcha
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="demoApp.captcha.mobilePhoneNumber">MobilePhoneNumber</span></th>
+                    <th><span translate="demoApp.captcha.captcha">Captcha</span></th>
+                    <th><span translate="demoApp.captcha.captchaStatus">CaptchaStatus</span></th>
+                    <th><span translate="demoApp.captcha.createDate">CreateDate</span></th>
+                    <th><span translate="demoApp.captcha.modifyDate">ModifyDate</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="captcha in vm.captchas track by captcha.id">
+                    <td><a ui-sref="captcha-detail({id:captcha.id})">{{captcha.id}}</a></td>
+                    <td>{{captcha.mobilePhoneNumber}}</td>
+                    <td>{{captcha.captcha}}</td>
+                    <td translate="{{'demoApp.CaptchaStatus.' + captcha.captchaStatus}}">{{captcha.captchaStatus}}</td>
+                    <td>{{captcha.createDate | date:'medium'}}</td>
+                    <td>{{captcha.modifyDate | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="captcha-detail({id:captcha.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="captcha.edit({id:captcha.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="captcha.delete({id:captcha.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
