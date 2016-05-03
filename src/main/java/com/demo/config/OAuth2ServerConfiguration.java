@@ -23,6 +23,7 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
 
 @Configuration
 public class OAuth2ServerConfiguration {
@@ -89,6 +90,9 @@ public class OAuth2ServerConfiguration {
         @Inject
         private JHipsterProperties jHipsterProperties;
 
+        @Inject
+        private ClientDetailsService clientDetailService;
+
         @Bean
         public TokenStore tokenStore() {
             return new JdbcTokenStore(dataSource);
@@ -112,16 +116,19 @@ public class OAuth2ServerConfiguration {
             oauthServer.allowFormAuthenticationForClients();
         }
 
+
+        //在这里配置outh client
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            clients
-                .inMemory()
-                .withClient(jHipsterProperties.getSecurity().getAuthentication().getOauth().getClientid())
-                .scopes("read", "write")
-                .authorities(AuthoritiesConstants.ADMIN, AuthoritiesConstants.USER)
-                .authorizedGrantTypes("password", "refresh_token", "authorization_code", "implicit")
-                .secret(jHipsterProperties.getSecurity().getAuthentication().getOauth().getSecret())
-                .accessTokenValiditySeconds(jHipsterProperties.getSecurity().getAuthentication().getOauth().getTokenValidityInSeconds());
+            clients.withClientDetails(clientDetailService);
+//            clients
+//                .inMemory()
+//                .withClient(jHipsterProperties.getSecurity().getAuthentication().getOauth().getClientid())
+//                .scopes("read", "write")
+//                .authorities(AuthoritiesConstants.ADMIN, AuthoritiesConstants.USER)
+//                .authorizedGrantTypes("password", "refresh_token", "authorization_code", "implicit")
+//                .secret(jHipsterProperties.getSecurity().getAuthentication().getOauth().getSecret())
+//                .accessTokenValiditySeconds(jHipsterProperties.getSecurity().getAuthentication().getOauth().getTokenValidityInSeconds());
         }
     }
 }
