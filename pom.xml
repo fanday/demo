@@ -427,19 +427,119 @@
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling-maven-plugin.version}</version>
-                <configuration>
-                    <configFolder>src/test/gatling/conf</configFolder>
-                    <dataFolder>src/test/gatling/data</dataFolder>
-                    <resultsFolder>target/gatling/results</resultsFolder>
-                    <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
-                    <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
-                    <!-- This will force Gatling to ask which simulation to run
-                      This is useful when you have multiple simulations -->
-                    <!--
-                    <simulationClass>CityGatlingTest</simulationClass>
-                    -->
-                    <simulationClass>CityGatlingTest</simulationClass>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>CityGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <!-- This will force Gatling to ask which simulation to run
+              This is useful when you have multiple simulations -->
+                            <!--
+            <simulationClass>CityGatlingTest</simulationClass>
+            -->
+                            <simulationClass>CityGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>CaptchaGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>CaptchaGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>EntryGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>EntryGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>GoalGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>GoalGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>MetricGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>MetricGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>ProvinceGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>ProvinceGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>UserInfoGatlingTest</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <configFolder>src/test/gatling/conf</configFolder>
+                            <dataFolder>src/test/gatling/data</dataFolder>
+                            <resultsFolder>target/gatling/results</resultsFolder>
+                            <bodiesFolder>src/test/gatling/bodies</bodiesFolder>
+                            <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
+                            <simulationClass>UserInfoGatlingTest</simulationClass>
+                        </configuration>
+                    </execution>
+                </executions>
+
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -671,7 +771,7 @@
                         </lifecycleMappingMetadata>
                     </configuration>
                 </plugin>
-             </plugins>
+            </plugins>
         </pluginManagement>
     </build>
 
