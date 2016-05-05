@@ -435,7 +435,9 @@
                     <simulationsFolder>src/test/gatling/simulations</simulationsFolder>
                     <!-- This will force Gatling to ask which simulation to run
                       This is useful when you have multiple simulations -->
+                    <!--
                     <simulationClass>*</simulationClass>
+                    -->
                 </configuration>
             </plugin>
             <plugin>
