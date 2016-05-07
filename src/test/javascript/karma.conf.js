@@ -55,7 +55,7 @@ module.exports = function (config) {
             './**/*.js': ['coverage']
         },
 
-        reporters: ['dots', 'jenkins', 'coverage', 'progress'],
+        reporters: ['dots', 'jenkins', 'coverage', 'progress','junit'],
 
         jenkinsReporter: {
 
