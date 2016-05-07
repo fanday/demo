@@ -78,6 +78,7 @@
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
         <sonar.tests>${project.basedir}/src/test/</sonar.tests>
+        <baseURL>http://192.168.1.104:8080</baseURL>
     </properties>
 
     <dependencies>
