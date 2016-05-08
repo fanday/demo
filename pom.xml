@@ -431,7 +431,7 @@
                 <executions>
                     <execution>
                         <id>CityGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -451,7 +451,7 @@
                     </execution>
                     <execution>
                         <id>CaptchaGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -466,7 +466,7 @@
                     </execution>
                     <execution>
                         <id>EntryGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -481,7 +481,7 @@
                     </execution>
                     <execution>
                         <id>GoalGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -496,7 +496,7 @@
                     </execution>
                     <execution>
                         <id>MetricGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -511,7 +511,7 @@
                     </execution>
                     <execution>
                         <id>ProvinceGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
@@ -526,7 +526,7 @@
                     </execution>
                     <execution>
                         <id>UserInfoGatlingTest</id>
-                        <phase>test</phase>
+                        <!-- <phase>test</phase> -->
                         <goals>
                             <goal>execute</goal>
                         </goals>
