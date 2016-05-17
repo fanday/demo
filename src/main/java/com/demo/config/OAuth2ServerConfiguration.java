@@ -120,15 +120,15 @@ public class OAuth2ServerConfiguration {
         //在这里配置outh client
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            clients.withClientDetails(clientDetailService);
-//            clients
-//                .inMemory()
-//                .withClient(jHipsterProperties.getSecurity().getAuthentication().getOauth().getClientid())
-//                .scopes("read", "write")
-//                .authorities(AuthoritiesConstants.ADMIN, AuthoritiesConstants.USER)
-//                .authorizedGrantTypes("password", "refresh_token", "authorization_code", "implicit")
-//                .secret(jHipsterProperties.getSecurity().getAuthentication().getOauth().getSecret())
-//                .accessTokenValiditySeconds(jHipsterProperties.getSecurity().getAuthentication().getOauth().getTokenValidityInSeconds());
+//            clients.withClientDetails(clientDetailService);
+            clients
+                .inMemory()
+                .withClient(jHipsterProperties.getSecurity().getAuthentication().getOauth().getClientid())
+                .scopes("read", "write")
+                .authorities(AuthoritiesConstants.ADMIN, AuthoritiesConstants.USER)
+                .authorizedGrantTypes("password", "refresh_token", "authorization_code", "implicit")
+                .secret(jHipsterProperties.getSecurity().getAuthentication().getOauth().getSecret())
+                .accessTokenValiditySeconds(jHipsterProperties.getSecurity().getAuthentication().getOauth().getTokenValidityInSeconds());
         }
     }
 }
