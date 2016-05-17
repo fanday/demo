@@ -31,6 +31,12 @@ entity City{
     cityName String
 }
 
+entity Message{
+	title String,
+    brief String,
+    content String
+}
+
 enum CaptchaStatus {
     NEW, VERIFY_PASS, VERIFY_FAILED
   }

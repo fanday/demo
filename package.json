@@ -8,7 +8,8 @@
     "src/main/webapp/bower_components"
   ],
   "dependencies": {
-    "bower": "^1.6.3"
+    "bower": "^1.6.3",
+    "simplemde": "^1.10.1"
   },
   "devDependencies": {
     "browser-sync": "2.11.2",

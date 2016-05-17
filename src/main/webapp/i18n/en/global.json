@@ -14,6 +14,7 @@
                 "province": "Province",
                 "city": "City",
                 "captcha": "Captcha",
+                "message": "Message",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
