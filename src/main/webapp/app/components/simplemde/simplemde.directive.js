@@ -11,7 +11,7 @@
         transclude: true,
         require: '?ngModel',
         scope: {},
-        template: '<textarea></textarea>',
+        template: '<div class="mde-content"><textarea></textarea></div>',
         link: function(scope, element, attrs, ngModelCtrl) {//https://www.nadeau.tv/using-ngmodelcontroller-with-custom-directives/
           console.log("simplemde");
           var simplemde = new SimpleMDE();
