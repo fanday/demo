@@ -2,9 +2,6 @@
   'use strict';
   angular
     .module('demoApp')
-    .controller('fndController', ['$scope','$parse', function($scope,$parse) {
-      $scope.value = 'Hello';
-    }])
     .directive('fndMde', function($timeout) {
       return {
         restrict: 'E',
@@ -15,8 +12,6 @@
         link: function(scope, element, attrs, ngModelCtrl) {//https://www.nadeau.tv/using-ngmodelcontroller-with-custom-directives/
           console.log("simplemde");
           var simplemde = new SimpleMDE();
-          //var value = ngModelCtrl.$viewValue;
-          //simplemde.value(value);
           $timeout(function() {
                     var value = ngModelCtrl.$viewValue;
                     simplemde.value(value);
@@ -31,7 +26,6 @@
                 console.log('modelvalue - ' + ngModelCtrl.$viewValue);
                 return ngModelCtrl.$viewValue;
             };
-          //Todo Get and update editor value
         }
       };
     });

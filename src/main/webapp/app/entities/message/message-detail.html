@@ -1,4 +1,3 @@
-
 <div>
     <h2><span translate="demoApp.message.detail.title">Message</span> {{vm.message.id}}</h2>
     <hr>
@@ -15,14 +14,13 @@
         <hr>
         <dt><span translate="demoApp.message.content">Content</dt></dt>
         <dd>
-            <span>{{vm.message.content}}<span>
+            <p class="mde-content" fnd-markdown="vm.message.content"></p>
         </dd>
         <hr>
     </dl>
-
     <button type="submit"
             onclick="window.history.back()"
             class="btn btn-info">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
-    </button>
+            </button>
 </div>
