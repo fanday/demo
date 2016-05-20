@@ -26,7 +26,7 @@
                 templateUrl: 'app/components/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'vm',
-                resolve: {
+                resolve: {//主要是实现按需加载
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('login');
                         return $translate.refresh();
